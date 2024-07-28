@@ -11,3 +11,6 @@ yarn-error.log*
 # Compiled output
 dist/
 build/
+
+# ide
+.idea/
