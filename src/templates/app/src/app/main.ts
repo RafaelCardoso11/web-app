@@ -3,6 +3,7 @@ import { AppModule } from './app.module';
 import next from 'next';
 import { parse } from 'url';
 import { Request, Response } from 'express';
+import { Logger } from '@nestjs/common';
 
 async function bootstrap() {
   const dev = process.env.NODE_ENV !== 'production';
@@ -20,7 +21,9 @@ async function bootstrap() {
       handle(req, res, parsedUrl);
     });
 
-    await app.listen(PORT);
+    await app.listen(PORT).finally(() => {
+      Logger.log(`✨ Projeto PSDIT rodando em http://localhost:${PORT} ✨`);
+    });
   });
 }
 bootstrap();
