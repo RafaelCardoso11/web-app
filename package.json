@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "app": "cd templates/app && npm run dev",
+    "app": "cd src/templates/app && npm run dev",
     "build": "tsc && npm run copy-templates",
     "copy-templates": "ts-node ./scripts/copy-templates.ts"
   },
