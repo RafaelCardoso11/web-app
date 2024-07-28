@@ -12,6 +12,6 @@ npm install -g cli-psdit
 ## Gerar projetos
 
 ```bash
-web-app <nome-do-projeto>  
+web-app create <nome-do-projeto>  
 ```
 
