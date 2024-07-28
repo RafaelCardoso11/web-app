@@ -1,6 +1,6 @@
 {
   "name": "cli-psdit",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "",
   "bin": {
     "web-app": "./dist/bin/cli.js"
@@ -15,9 +15,14 @@
   "license": "ISC",
   "dependencies": {
     "commander": "^12.1.0",
-    "fs-extra": "^11.2.0"
+    "ejs": "^3.1.10",
+    "figlet": "^1.7.0",
+    "fs-extra": "^11.2.0",
+    "inquirer": "^10.1.4"
   },
   "devDependencies": {
+    "@types/ejs": "^3.1.5",
+    "@types/figlet": "^1.5.8",
     "@types/fs-extra": "^11.0.4",
     "@types/node": "^22.0.0",
     "jest": "^29.7.0",
