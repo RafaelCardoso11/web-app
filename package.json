@@ -1,6 +1,6 @@
 {
   "name": "cli-psdit",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "bin": {
     "web-app": "./dist/bin/cli.js"
