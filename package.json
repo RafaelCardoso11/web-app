@@ -1,7 +1,10 @@
 {
-  "name": "web-app",
-  "version": "1.0.0",
+  "name": "cli-psdit",
+  "version": "1.0.2",
   "description": "",
+  "bin": {
+    "web-app": "./dist/bin/cli.js"
+  },
   "scripts": {
     "app": "cd src/templates/app && npm run dev",
     "build": "tsc && npm run copy-templates",
