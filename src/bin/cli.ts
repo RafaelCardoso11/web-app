@@ -10,9 +10,7 @@ program
   .version("1.0.0")
   .description("CLI para gerar projetos NestJS + Next.js");
 
-program.hook("preAction", () => {
-  displayBanner("PROJECT - PSDIT");
-});
+program.hook("preAction", () => displayBanner("PROJECT - PSDIT"));
 
 program
   .command("create")
