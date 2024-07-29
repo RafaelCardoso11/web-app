@@ -2,7 +2,7 @@ import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import next from 'next';
 import { parse } from 'url';
-import { Request, Response } from 'express';
+import { NextFunction, Request, Response } from 'express';
 import { Logger } from '@nestjs/common';
 
 async function bootstrap() {
@@ -15,8 +15,12 @@ async function bootstrap() {
   await nextApp.prepare().then(async () => {
     const app = await NestFactory.create(AppModule);
 
-    app.use((req: Request, res: Response) => {
+    app.use((req: Request, res: Response, next: NextFunction) => {
       const parsedUrl = parse(req.url, true);
+
+      if (parsedUrl.pathname.startsWith('/api')) {
+        next();
+      }
 
       handle(req, res, parsedUrl);
     });
